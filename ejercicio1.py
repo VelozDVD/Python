@@ -3,14 +3,24 @@ def juego():
     num2=58
     x=0
     while True: 
+        x = x + 1
         if (num1 == num2):
-            break
+            print("¡Correcto! Adivinaste el número después de", x, "intentos.")
+            break        
+        if (x == 20):
+             print("Hermano ya llevas " + str(x) + " intentos, ya rindete")
+        elif(x == 40):
+             print("Ya van " + str(x) + " intentos, eres un guerrero :'O")
+        elif(x == 50):
+             print("Vamos que si puedes!")
+        elif(x == 60):
+             print("Si no lo consigues voy a terminar el juego")
+        elif(x == 100):
+             print("Perdón... pero en " + str(x) + "no lo conseguiste :(")
+             break
         else: 
-            x = x + 1
             print("Incorrecto. Intenta de nuevo:")
-            num1 = int(input("Elige nuvamente: "))
-    
-    print("¡Correcto! Adivinaste el número después de", x, "intentos.")
+            num1 = int(input("Elige nuvamente: "))        
     input()
 
 
