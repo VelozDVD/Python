@@ -3,8 +3,15 @@ import random
 S = "Si"
 N = "No"
 
+while True:
+    Nombre = input("Hola, ¿Comó te llamas?: ").capitalize()
+    if not Nombre.isalpha():
+        print("Ingresa correctamente tu nombre: ")
+    else:
+        break
 
-
+print("Hola " + Nombre + ", ¡Bienvenido al juego de las tablas!")
+print("Comenzemos!")
 IntentosMaximos = 4
 
 while (True):
@@ -17,10 +24,14 @@ while (True):
     for _ in range(IntentosMaximos):
 
         print(str(x) + "x" + str(y) + "= ")
-        Num = int(input())            
+        Num = input()            
         if(Num == z):
             print("Su respuesta es Correcta")
             break
+        if not Num.isalpha():
+            print("Ingrese un número valido")
+        if(Num != int()):
+            print("Ingrese un número valido")
         else:
             IntentosRealizados += 1
             intentosRestantes = IntentosMaximos - IntentosRealizados
@@ -28,10 +39,12 @@ while (True):
     else: 
         print("Se acabaron tus intentos, ¿desea continuar? (Si/No)")
 
-        Respuesta = input()
-        if (str.upper(Respuesta) == "SI" & "si" & ""):
+        Respuesta = input().capitalize()
+        if (Respuesta == "Si"):
             break
-        if (str.upper(Respuesta) == "No"):
+        # elif(Respuesta == None):
+
+        if (Respuesta == "No"):
             print("Sigue Practicando")
             sys.exit()
             
