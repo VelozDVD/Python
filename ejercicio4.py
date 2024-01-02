@@ -24,14 +24,10 @@ while (True):
     for _ in range(IntentosMaximos):
 
         print(str(x) + "x" + str(y) + "= ")
-        Num = input()            
+        Num = int(input())     
         if(Num == z):
             print("Su respuesta es Correcta")
             break
-        if not Num.isalpha():
-            print("Ingrese un número valido")
-        if(Num != int()):
-            print("Ingrese un número valido")
         else:
             IntentosRealizados += 1
             intentosRestantes = IntentosMaximos - IntentosRealizados
